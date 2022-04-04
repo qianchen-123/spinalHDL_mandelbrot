@@ -180,7 +180,7 @@ case class PixelSolver(g : PixelSolverGenerics) extends Component{
     Inserter.loopBack.payload.assignSomeByName(input.payload)
     //Inserter.loopBack.ready := io.rsp.ready && Inserter.loopBack.valid
 
-    input.ready := io.rsp.ready || Inserter.loopBack.ready
+    input.ready := io.rsp.ready || Inserter.loopBack.valid
   }
 }
 
